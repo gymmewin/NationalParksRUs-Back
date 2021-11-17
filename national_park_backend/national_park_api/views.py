@@ -6,6 +6,7 @@ from rest_framework import generics
 from .serializers import NationalParkSerializer
 from .models import NationalPark
 
+
 class NationalParkList(generics.ListCreateAPIView):
     queryset = NationalPark.objects.all().order_by('id')
     serializer_class = NationalParkSerializer

@@ -82,9 +82,9 @@ WSGI_APPLICATION = 'national_park_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django_homework_api',
-        'USER': 'django',
-        'PASSWORD': 'django',
+        'NAME': 'parks',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': 'localhost'
     }
 }

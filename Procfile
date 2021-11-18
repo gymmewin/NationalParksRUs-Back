@@ -1,1 +1,1 @@
-web: gunicorn parks.wsgi
+web: gunicorn national_park_backend.wsgi

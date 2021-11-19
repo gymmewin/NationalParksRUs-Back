@@ -15,8 +15,8 @@ class NationalPark(models.Model):
         verbose_name_plural = verbose_name
 
 class Attraction(models.Model):
-    name = models.CharField(max_length=180)
-    park = models.ForeignKey(NationalPark, on_delete=models.CASCADE)
+    attraction_name = models.CharField(max_length=180)
+    park = models.ForeignKey(NationalPark, related_name='top_attractions', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name

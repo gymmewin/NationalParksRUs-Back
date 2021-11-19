@@ -9,6 +9,17 @@ class NationalPark(models.Model):
     location = models.CharField(max_length=255)
     admission_fee = models.FloatField()
 
+
     class Meta:
         verbose_name = 'national_park'
         verbose_name_plural = verbose_name
+
+class Attraction(models.Model):
+    name = models.CharField(max_length=180)
+    park = models.ForeignKey(NationalPark, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ['name']

@@ -96,6 +96,17 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'django_homework_api',
+#         'USER': 'django',
+#         'PASSWORD': 'django',
+#         'HOST': 'localhost'
+#     }
+# }
+
+
 db_from_env = dj_database_url.config(conn_max_age=600) # add this
 DATABASES['default'].update(db_from_env) # add this
 
